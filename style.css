@@ -1,6 +1,70 @@
 /* The code below makes the background of the header black and the font color of the title white. Change this to match what you want for your website. */
+body {
+    margin: 5px;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+
 header {
-    background-color: black;
+    position: relative;
+    background-image: url("https://i.pinimg.com/736x/b1/39/13/b13913b5fc9ef1e9af780195763d7c75.jpg");
+    background-position: center;
+    text-align: center;
+    font-family: 'Goudy Old Style', serif;
+    font-size: 115%;
     color: white;
     padding: 128px 16px;
+    overflow: hidden; /* Keeps the overlay inside */
 }
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(49, 49, 49, 0.4);
+    z-index: 0;
+    pointer-events: none; /* So it doesn’t block clicks */
+}
+
+header * {
+    position: relative;
+    z-index: 1;
+}
+
+.section{
+    font-family:'Times New Roman', Times, serif;
+    background-color: #6394b3;
+    color: white;
+}
+
+.media-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers everything */
+  gap: 50px; /* Adjusts spacing between images and video */
+}
+
+.media-container img, 
+.media-container iframe {
+  width: 250px; /* Keeps consistent sizing */
+}
+
+.Causes-images {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  justify-content: center; /* Centers content */
+  gap: 40px; /* Spaces images and video equally */
+}
+
+.whatcanwedo{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers everything */
+    gap: 50px; /* Adjusts spacing between images and video */
+}
+/* .oil-spill{
+    width: 100px; /* Adjust as needed */
+/*  height: auto; /* Keeps aspect ratio */
+/* }
